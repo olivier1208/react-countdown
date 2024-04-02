@@ -3,7 +3,8 @@ import './App.css'
 import CountdownTimer from "./components/CountdownTimer";
 
 function App() {
-    const LEFT_IN_MS = 1 * 44 * 60 * 1000;
+    const end = new Date('2024-04-02').setHours(16, 30, 0, 0)
+    const LEFT_IN_MS = end - new Date().getTime();
     const NOW_IN_MS = new Date().getTime();
 
     const dateTimeAfterThreeDays = NOW_IN_MS + LEFT_IN_MS;
